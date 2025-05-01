@@ -1,0 +1,148 @@
+body {
+transition: background 0.3s, color 0.3s;
+
+padding-top: 70px;
+
+}
+
+.calculator-box, .features-box {
+border-radius: 20px;
+padding: 2rem;
+background-color: #ffffff;
+color: #000000;
+transition: background 0.3s, color 0.3s;
+}
+
+.email-item {
+    word-break: break-word;
+    white-space: normal;
+}
+
+.btn {
+min-width: 70px;
+min-height: 70px;
+font-size: 1.4rem;
+border-radius: 15px !important;
+transition: all 0.2s ease;
+}
+
+#removeNum{
+    position: relative;
+    right: 3px;
+}
+
+.btn:hover {
+transform: scale(1.05);
+}
+
+.btn-warning {
+background-color: #ffb703;
+color: #000;
+font-weight: bold;
+}
+
+input#screen {
+background-color: #1e1e1e;
+color: #00ff95;
+border: none;
+border-radius: 10px;
+padding: 1rem;
+font-size: 2rem;
+text-align: right;
+width: 100%;
+}
+
+.dark-mode {
+background-color: #121212;
+color: #e0e0e0;
+}
+
+.dark-mode .calculator-box,
+.dark-mode .features-box {
+background-color: #1e1e1e !important;
+color: #e0e0e0 !important;
+}
+
+.dark-mode input#screen {
+background-color: #fff !important;
+color: #000 !important;
+}
+
+
+.dark-mode .btn-warning {
+background-color: #ffb703 !important;
+color: #000 !important;
+}
+
+.dark-mode .features-box {
+background-color: #121212 !important;
+}
+
+.dark-mode .list-group-item {
+background-color: #121212 !important;
+color: #fff !important;
+}
+
+.dark-mode nav{
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+.dark-mode .navbar-brand{
+    color: #fff !important;
+}
+
+.theme-toggle {
+cursor: pointer;
+}
+button, input {
+    touch-action: manipulation;
+}
+
+@media (max-width: 767px) {
+    .calculator-box,
+    .features-box {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        min-width: 60px;
+        min-height: 60px;
+    }
+
+    #removeNum{
+        position: relative;
+        right: 6px;
+    }
+
+    #modulo{
+        position: relative;
+        right: 5px;
+    }
+
+    input#screen {
+        font-size: 1.8rem;
+    }
+
+    .features-box {
+        margin-bottom: 1rem;
+    }
+
+    /* Stack sidebar and calculator vertically on smaller screens */
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-8, .col-md-4 {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

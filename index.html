@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Pro Calculator</title>
+</head>
+
+<body>
+    <!-- Navbar with theme switch -->
+    <nav class="navbar navbar-light bg-light px-4 mb-3 fixed-top">
+        <span class="navbar-brand fw-bold">🧮 Pro Calculator</span>
+        <div class="form-check form-switch">
+            <input class="form-check-input theme-toggle" type="checkbox" id="themeSwitch">
+            <label class="form-check-label" for="themeSwitch" id="textSwitch">🌚</label>
+        </div>
+    </nav>
+    
+    <div class="container ">
+        <div class="row">
+
+
+            <!-- Sidebar -->
+            <aside class="col-md-4">
+                <div class="features-box shadow">
+                    <h4 class="text-primary fw-bold text-center">🛠 Features</h4>
+                    <ul class="list-group list-group-flush mt-3">
+                        <li class="list-group-item">✅<span class="ms-2">Basic arithmetic</span></li>
+                        <li class="list-group-item">⌨️<span class="ms-2">Keyboard support</span></li>
+                        <li class="list-group-item">🧼<span class="ms-2">Clear & Backspace</span></li>
+                        <li class="list-group-item">📱 <span class="ms-2">Mobile responsive</span></li>
+                        <li class="list-group-item">🌙<span class="ms-2">Theme toggle (Light/Dark)</span></li>
+                        <li class="list-group-item email-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
+                            fill="#0000F5">
+                            <path
+                                d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z" />
+                        </svg></span><span class="ms-2">najibabdessamad10@gmail.com</span>
+
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Calculator -->
+            <main class="col-md-8 mb-4">
+                <div class="calculator-box shadow">
+                    <h1 class="text-danger text-center fw-bold">🧮 Calculator</h1>
+                    <input readonly type="text" id="screen" class="my-3" />
+
+                    <div class="d-flex flex-wrap gap-3 justify-content-center mt-2">
+                        <button class="btn btn-warning p-3 fw-bold" onclick="clearScreen()">C</button>
+                        <button class="btn btn-warning p-2 abs" value="" id="abs">ABS</button>
+                        <button class="btn btn-warning p-3 operator" value="%" id="modulo">%</button>
+                        <button class="btn btn-warning p-3 num fw-bold" value="" id="removeNum"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></button>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 justify-content-center mt-2">
+                        <button class="btn btn-light p-3 num" value="1">1</button>
+                        <button class="btn btn-light p-3 num" value="2">2</button>
+                        <button class="btn btn-light p-3 num" value="3">3</button>
+                        <button class="btn btn-warning p-3 operator" value="-">-</button>
+                        
+                    </div>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center mt-2">
+                        <button class="btn btn-light p-3 num" value="4">4</button>
+                        <button class="btn btn-light p-3 num" value="5">5</button>
+                        <button class="btn btn-light p-3 num" value="6">6</button>
+                        <button class="btn btn-warning p-3 operator" value="+">+</button>
+                    </div>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center mt-2">
+                        <button class="btn btn-light p-3 num" value="7">7</button>
+                        <button class="btn btn-light p-3 num" value="8">8</button>
+                        <button class="btn btn-light p-3 num" value="9">9</button>
+                        <button class="btn btn-warning p-3 operator" value="*">*</button>
+                    </div>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center mt-2">
+                        <button class="btn btn-light p-3 num" value=".">.</button>
+                        <button class="btn btn-light p-3 num" value="0">0</button>
+                        <button class="btn btn-warning p-3 operator" value="/">/</button>
+                        <button class="btn btn-success p-3" onclick="calcule()">=</button>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
