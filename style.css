@@ -111,11 +111,6 @@ button, input {
         min-height: 60px;
     }
 
-    #removeNum{
-        position: relative;
-        left: 2px;
-    }
-
     #modulo{
         position: relative;
         left: 1px;
