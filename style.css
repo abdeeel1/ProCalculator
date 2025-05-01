@@ -28,7 +28,7 @@ transition: all 0.2s ease;
 
 #removeNum{
     position: relative;
-    right: 3px;
+    right: 1px;
 }
 
 .btn:hover {
@@ -113,12 +113,12 @@ button, input {
 
     #removeNum{
         position: relative;
-        right: 6px;
+        left: 2px;
     }
 
     #modulo{
         position: relative;
-        right: 5px;
+        left: 1px;
     }
 
     input#screen {
