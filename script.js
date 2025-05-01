@@ -32,7 +32,10 @@ operators.forEach((operator) => {
 
 const calcule = () => {
   try {
-    screen.value = Function('"use strict";return (' + screen.value + ")")();
+    // Convert only if % follows a number and is NOT followed by another number (avoids 2%2)
+    const expression = screen.value.replace(/(\d+(\.\d+)?)%(?!\d)/g, "($1/100)");
+
+    screen.value = Function('"use strict";return (' + expression + ")")();
   } catch {
     screen.value = "Error";
   }
@@ -52,6 +55,8 @@ document.addEventListener("keydown", function (event) {
     screen.value = screen.value.slice(0, -1);
   } else if (key === "Escape") {
     clearScreen();
+  } else if (key === "%") {
+    screen.value += key
   }
 });
 
